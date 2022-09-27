@@ -47,6 +47,7 @@ export default defineConfig({
         'vue/macros',
         '@vueuse/head',
         '@vueuse/core',
+        'vitest',
       ],
       dts: 'src/auto-imports.d.ts',
       dirs: [
@@ -140,6 +141,7 @@ export default defineConfig({
     deps: {
       inline: ['@vue', '@vueuse', 'vue-demi'],
     },
+    globals: true,
   },
 
   // https://github.com/antfu/vite-ssg

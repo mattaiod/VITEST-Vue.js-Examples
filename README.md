@@ -1,3 +1,3 @@
-You will find the tests in /src/tests
+You will find the tests in /test
 
-to run the tests: pnpm test
+To run the tests: pnpm test

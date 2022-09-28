@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import Playground from '../src/components/Playground.vue'
-import { getName } from './../src/controllers/playground'
+import { SURNAME_SYMBOL, getName } from './../src/controllers/playground'
 
 // -> vitest:
 //   - https://vitest.dev/api/
@@ -113,4 +113,27 @@ describe('Some tests and mocking', () => {
     wrapper.vm.$emit('emitValue')
     expect(wrapper.emitted().emitValue).toBeTruthy()
   })
+})
+
+describe('providing / inject', () => {
+  it('provide', () => {
+    const wrapper = mount(Playground, {
+      global: {
+        provide: {
+          name: 'john',
+        },
+      },
+    })
+    expect(wrapper.vm.state.name).toBe('john')
+  })
+// it('provide symbol', () => {
+//   const wrapper = mount(Playground, {
+//     global: {
+//       provide: {
+//         [SURNAME_SYMBOL]: 'john',
+//       },
+//     },
+//   })
+//   expect(wrapper.vm.state.surname).toBe('john')
+// })
 })

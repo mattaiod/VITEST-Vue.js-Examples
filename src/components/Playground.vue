@@ -13,6 +13,10 @@ const emitter = defineEmits<{
   (e: 'emitValue', payload: number): void
 }>()
 
+const state = reactive({
+  name: inject('name'),
+})
+
 const varToWatch = ref(1)
 const varSimple = ref(1)
 
@@ -41,4 +45,8 @@ watch(
   },
 )
 </script>
+
+<template>
+  <Provider />
+</template>
 

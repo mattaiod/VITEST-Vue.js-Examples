@@ -2,6 +2,10 @@
 import { AGE } from '~/controllers/playground'
 
 const test = AGE
+
+// const t = useI18n()
+
+// const a = t('test')
 </script>
 
 <template>

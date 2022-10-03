@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { emit } from 'process'
 import { getName } from '~/controllers/playground'
 
 const props = defineProps({
@@ -22,14 +23,13 @@ const varSimple = ref(1)
 
 const computedOnePlusOne = computed((): number => 1 + 1)
 
-const fnReturningAnImportedFunction = (): string => {
-  return getName()
-}
-fnReturningAnImportedFunction()
-
 const getNameToMock = getName
 
 const fnEmpty = () => ''
+
+const fnWithFnInside = () => {
+  fnEmpty()
+}
 
 watch(
   () => props.propNumber,

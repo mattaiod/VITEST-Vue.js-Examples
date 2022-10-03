@@ -1,5 +1,7 @@
+import { fn1 } from './playground2'
+
 export const getName = () => {
-  return 'empty'
+  fn1()
 }
 
 // export symbol age

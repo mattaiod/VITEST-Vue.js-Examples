@@ -21,6 +21,7 @@ declare module '@vue/runtime-core' {
     README: typeof import('./components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SpyingComponent: typeof import('./components/SpyingComponent.vue')['default']
     VariableComponent: typeof import('./components/VariableComponent.vue')['default']
     Vue2: typeof import('./components/Vue2.vue')['default']
   }

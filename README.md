@@ -8,7 +8,7 @@ You can find many basic examples of test with Vitest and Vue-utils-test
 - pnpm test
 
 ## Location of tests
-- /src/test/basic.test.ts
+- /test/basic.test.ts
 
 ## Interesting ressources
 

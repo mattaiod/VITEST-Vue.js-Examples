@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { emit } from 'process'
-import { getName } from '~/controllers/playground'
+import { getName } from '~/controllers/functions'
 
 const props = defineProps({
   propNumber: {

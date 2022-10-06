@@ -7,13 +7,21 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Component1: typeof import('./components/Component1.vue')['default']
+    'Component2.vue': typeof import('./components/Component2.vue.vue')['default']
+    Component3: typeof import('./components/Component3.vue')['default']
     Counter: typeof import('./components/Counter.vue')['default']
+    EmitingComponent: typeof import('./components/EmitingComponent.vue')['default']
     Footer: typeof import('./components/Footer.vue')['default']
+    MockingComponent: typeof import('./components/MockingComponent.vue')['default']
+    MountingComponent: typeof import('./components/MountingComponent.vue')['default']
     Playground: typeof import('./components/Playground.vue')['default']
     Provider: typeof import('./components/Provider.vue')['default']
+    ProvidingComponent: typeof import('./components/ProvidingComponent.vue')['default']
     README: typeof import('./components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    VariableComponent: typeof import('./components/VariableComponent.vue')['default']
     Vue2: typeof import('./components/Vue2.vue')['default']
   }
 }
